@@ -1,2 +1,2 @@
 # leetcode
-Repo for storing my solutions to various leetcode problems
+A repo for storing my solutions to various LeetCode problems
