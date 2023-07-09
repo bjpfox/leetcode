@@ -44,12 +44,14 @@ var groupAnagrams = function(strs) {
                 if ((Object.keys(word_letter_counts[i]['counts']).length === 0) && (word.length === 0)) {
                     word_letter_counts[i]['words'].push(word)
                     wordCaptured = true
+                    break
                 }
 
                 // If freqData is same as curent word (i.e. they are anagrams), just add the word to the current object
                 else if (doesWordFreqDataMatch(word_letter_counts[i]['counts'], letter_freq)) {
                     word_letter_counts[i]['words'].push(word)
                     wordCaptured = true
+                    break
                 }
             }
         }
