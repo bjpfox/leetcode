@@ -8,9 +8,9 @@ function doesWordFreqDataMatch(freqDataFirstWord, freqDataSecondWord) {
         return false
     }
     for (let data in freqDataFirstWord) {
-        if (!data in freqDataSecondWord) {
-            return false
-        }
+        // if (!data in freqDataSecondWord) {
+        //     return false
+        // }
         if (freqDataFirstWord[data] !== freqDataSecondWord[data]) {
             return false
         }
