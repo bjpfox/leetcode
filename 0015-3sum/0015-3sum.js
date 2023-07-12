@@ -53,7 +53,9 @@ var threeSum = function(nums) {
     let i = 0
     let j = 0
 
+    // sort is O(n log n), this is OK since solution will end up being O(n^2) at best
     nums.sort((a,b) => a - b)
+
 
     // if the ith value is positive, there's no way we could get a triplet, since j and k must be > i, hence cant sum to 0
     while(nums[i] <= 0) {
