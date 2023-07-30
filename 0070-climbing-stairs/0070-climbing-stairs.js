@@ -14,24 +14,26 @@
 // Loop through to our n-th step, adding counts for i-1 and i-2, as per the formula above
 // Return the overall count when we reach i=n
 
-var climbStairs = function(n) {
+const climbStairs = function(n) {
     // For n = 2, we have 2 ways (1-1, 2). For n = 1, we have 1 way (1)
     if (n <= 2) {
         return n
     } else {
         // Initialise for n = 1, n = 2, per above
         let stepCounter = {
-            currentCount: 2, 
-            previousCount: 1 
+            oneStepBack: 2, 
+            twoStepsBack: 1 
         }
-        let currentStepCount = stepCounter.currentCount + stepCounter.previousCount
+        let currentStepCount = stepCounter.oneStepBack + stepCounter.twoStepsBack
 
         for (let i = 3; i <= n; i++) {
-            currentStepCount = stepCounter.currentCount + stepCounter.previousCount
-            stepCounter.previousCount = stepCounter.currentCount
-            stepCounter.currentCount = currentStepCount
+            currentStepCount = stepCounter.oneStepBack + stepCounter.twoStepsBack
+            stepCounter.twoStepsBack = stepCounter.oneStepBack
+            stepCounter.oneStepBack = currentStepCount
         }
         return currentStepCount
     }
 };
+
+
 
