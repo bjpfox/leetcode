@@ -22,11 +22,6 @@ var intToRoman = function(num) {
     }
     for (let symbol in symbols) {
         let count = remainder / symbols[symbol] 
-        // console.log('remainder: ', remainder)
-        // console.log('symbols[symbol]: ', symbols[symbol])
-        // console.log('symbol: ', symbol)
-        // console.log('count: ', count)
-        // console.log('roman: ', romanNumber)
         if (count >= 1) {
             for (let i = 1; i <= count; i++) {
                 romanNumber += symbol
